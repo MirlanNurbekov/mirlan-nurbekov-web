@@ -1,0 +1,37 @@
+.experience-page {
+  padding: 4rem 2rem;
+  background-color: #0a192f;
+  color: #e0e0e0;
+  text-align: center;
+}
+
+.experience-item {
+  background-color: #112240;
+  margin: 1.5rem auto;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  max-width: 700px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.experience-item:hover {
+  transform: translateY(-5px);
+}
+
+.position-title {
+  font-size: 1.8rem;
+  color: #64ffda;
+  margin-bottom: 0.5rem;
+}
+
+.company-name {
+  font-size: 1.2rem;
+  color: #00cc88;
+  margin-bottom: 0.5rem;
+}
+
+.experience-description {
+  font-size: 1rem;
+  line-height: 1.6;
+}
