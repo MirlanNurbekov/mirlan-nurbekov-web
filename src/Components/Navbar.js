@@ -6,6 +6,7 @@ import '../Styles/Navbar.css';
 const profilePic = process.env.PUBLIC_URL + '/Images/me.jpeg';
 const message = "Mirlan Nurbekov is the best programmer in the world";
 const binaryMessage = textToBinary(message);
+const resumePath = process.env.PUBLIC_URL + '/Documents/Nurbekov_Mirlan_CV.pdf';
 
 const Navbar = () => {
   const [displayedText, setDisplayedText] = useState('');
@@ -56,6 +57,11 @@ const Navbar = () => {
           <li><Link to="/education" className={`nav-item ${isActive('/education') ? 'selected' : ''}`} onClick={() => setIsOpen(false)}>Education</Link></li>
           <li><Link to="/projects" className={`nav-item ${isActive('/projects') ? 'selected' : ''}`} onClick={() => setIsOpen(false)}>Projects</Link></li>
           <li><Link to="/contact" className={`nav-item ${isActive('/contact') ? 'selected' : ''}`} onClick={() => setIsOpen(false)}>Contact</Link></li>
+          <li>
+            <a href={resumePath} download="Nurbekov_Mirlan_CV.pdf" className="resume-button">
+              DOWNLOAD RESUME
+            </a>
+          </li>
         </ul>
         <div className="burger-menu" onClick={toggleMenu}>
           <div className={`line1 ${isOpen ? 'toggle' : ''}`}></div>
