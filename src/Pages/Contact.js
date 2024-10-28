@@ -1,41 +1,23 @@
 // src/Pages/Contact.js
 
-import React, { useState } from 'react';
+import React from 'react';
 import '../Styles/Contact.css';
 
 const Contact = () => {
-  const [formData, setFormData] = useState({ name: '', email: '', message: '' });
-
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData((prevData) => ({ ...prevData, [name]: value }));
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log('Form submitted:', formData);
-    // Add any additional form handling or integration here
-    setFormData({ name: '', email: '', message: '' });
-  };
-
   return (
     <div className="contact-page">
-      <h2>Contact Me</h2>
-      <form onSubmit={handleSubmit} className="contact-form">
-        <label>
-          Name
-          <input type="text" name="name" value={formData.name} onChange={handleChange} required />
-        </label>
-        <label>
-          Email
-          <input type="email" name="email" value={formData.email} onChange={handleChange} required />
-        </label>
-        <label>
-          Message
-          <textarea name="message" value={formData.message} onChange={handleChange} required />
-        </label>
-        <button type="submit">Send Message</button>
-      </form>
+      <h2 className="contact-title">Contact Me</h2>
+      <p className="contact-description">
+        I’d love to hear from you! Feel free to reach out through email at 
+        <a href="mailto:example@example.com" className="contact-email"> example@example.com</a>
+        or connect with me on my social media platforms below.
+      </p>
+      <div className="contact-socials">
+        {/* Replace these links with actual social media URLs */}
+        <a href="https://github.com/yourprofile" className="social-link">GitHub</a>
+        <a href="https://linkedin.com/in/yourprofile" className="social-link">LinkedIn</a>
+        <a href="https://twitter.com/yourprofile" className="social-link">Twitter</a>
+      </div>
     </div>
   );
 };

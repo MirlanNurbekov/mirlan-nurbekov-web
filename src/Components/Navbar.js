@@ -46,7 +46,7 @@ const Navbar = () => {
           <img src={profilePic} alt="Profile" className="profile-pic" />
           <div className="text-section">
             <h1 className="signature">Mirlan Nurbekov</h1>
-            {window.innerWidth >= 768 && <span className="profession">| {displayedText}</span>}
+            {window.innerWidth >= 768 && <span className="profession">|{displayedText}</span>}
           </div>
         </div>
         <ul className={`nav-links ${isOpen ? 'nav-active' : ''}`}>
